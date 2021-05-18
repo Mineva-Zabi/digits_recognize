@@ -59,9 +59,14 @@ if __name__ == "__main__":
         log_text = "User ({0}): {1}".format(user_name, str(message.voice))
         log(log_text)
 
+        with open("logs/logfile.txt", "w+") as l:
+            l.write(log_text)
+
+
         tele_file = bot.get_file(message.voice.file_id)
         log_text = "User ({0}): {1}".format(user_name, str(tele_file))
         log(log_text)
+
 
         ogg_data = bot.download_file(tele_file.file_path)
         with open("data/ogg/" + user[user_id] + ".ogg", "wb") as f:
