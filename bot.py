@@ -30,7 +30,7 @@ if __name__ == "__main__":
     def get_text_messages(message):
         user_id = message.from_user.id
         user_name = message.from_user.username
-        answer = "Сәлем, дос! Маған сөйлеу тану бойыншы оқу моделін құру үшін мәліметтер базасы қажет. Сенің көмегің өте маңызды! Жалғастыру үшін /alga бас"
+        answer = "Сәлем, дос! Маған сөйлеу тану бойынша оқу моделін құру үшін мәліметтер базасы қажет. Сенің көмегің өте маңызды! Жалғастыру үшін /alga бас"
         bot.send_message(user_id, answer)
 
     @bot.message_handler(commands = ['alga'])
