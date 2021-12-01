@@ -134,9 +134,9 @@ if __name__ == "__main__":
         os.makedirs("data/splitted")
 
     for file in files:
-        for i in range(1, 5):
+        for i in range(1, 2):
             segment_hop_sec = i/10 #float(sys.argv[2])
-            for j in range(1, 5):
+            for j in range(2, 3):
                 vad_threshold = j/100 #float(sys.argv[3])
                 output_wav_directory = "data/splitted/"#sys.argv[4]
                 wav_file_path = "data/wav/" + file #sys.argv[1]
@@ -150,7 +150,7 @@ if __name__ == "__main__":
                     continue
 
                 max_duration_sec = get_max_duration(segments, sample_rate, segment_hop_sec)
-                if max_duration_sec > 1:
+                if max_duration_sec > 0.8:
                     print(f"max_duration_sec={max_duration_sec:.3f}")
                     continue
 
