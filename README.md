@@ -1,1 +1,1 @@
-# digits_recognize
+# Digits recognizer bot in Kazakh language 
